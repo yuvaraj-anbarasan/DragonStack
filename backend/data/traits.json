@@ -1,0 +1,35 @@
+[
+    {
+        "type":"bodyColor",
+        "values":[
+            "black",
+            "white",
+            "green",
+            "dark blue"
+        ]
+    },
+    {
+        "type":"pattern",
+        "values":[
+            "plain",
+            "stripped",
+            "dotted"
+        ]
+    },
+    {
+        "type":"build",
+        "values":[
+            "streamline and sleathy",
+            "strong and muscular",
+            "skinny"
+        ]
+    },
+    {
+        "type":"size",
+        "values":[
+            "small",
+            "big",
+            "gigantic"
+        ]
+    }
+]

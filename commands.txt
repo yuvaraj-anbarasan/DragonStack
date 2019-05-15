@@ -1,0 +1,26 @@
+createdb -U postgres dragonstackdb
+
+
+//connect to database
+psql -U postgres dragonstackdb
+
+CREATE USER node_user WITH SUPERUSER PASSWORD 'node_password';
+
+CREATE TABLE generation(
+    id         SERIAL PRIMARY KEY,
+    expiration TIMESTAMP NOT NULL
+);
+
+CREATE TABLE dragon(
+    id             SERIAL PRIMARY KEY,
+    bithdate       TIMESTAMP NOT NULL,
+    nickname       varchar(70),
+    "generationId" INTEGER,
+    FOREIGN KEY ("generationId") REFERENCES generation(id)
+);
+
+npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
+
+npm i pg@7.4.3 --save
+
+./node_modules/nodemon/bin/nodemon.js databasePool.js

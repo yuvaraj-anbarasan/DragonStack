@@ -4,7 +4,8 @@ const {REFRESH_RATE, SECS}=require('../config');
 const refreshRate = REFRESH_RATE * SECS;
 class Generation{
     constructor(){
-        this.expiration=this.calculateExpiration();
+        this.expiration = this.calculateExpiration();
+        this.generationId = undefined;
     }
 
     calculateExpiration(){
@@ -20,7 +21,7 @@ class Generation{
             throw new Error('Generation time expired on '+ this.expiration);
         }
 
-        return new Dragon();
+        return new Dragon({ generationId : this.generationId });
     }
 }
 

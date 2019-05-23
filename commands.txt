@@ -24,3 +24,12 @@ npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
 npm i pg@7.4.3 --save
 
 ./node_modules/nodemon/bin/nodemon.js databasePool.js
+
+select * from dragon inner join dragontrait on dragon.id = dragontrait."dragonId" inner join trait on trait.id = dragontrait."traitId";
+ id |        birthdate        | nickname | generationId | traitId | dragonId | id | traitType |     traitValue
+----+-------------------------+----------+--------------+---------+----------+----+-----------+---------------------
+  1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |       5 |        1 |  5 | bodyColor | green
+  1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |      11 |        1 | 11 | pattern   | dotted
+  1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |       4 |        1 |  4 | size      | gigantic
+  1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |       9 |        1 |  9 | build     | strong and muscular
+(4 rows)

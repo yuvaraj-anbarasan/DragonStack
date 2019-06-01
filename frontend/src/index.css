@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+    margin: 10%;
+    font-size: 20px;
+}
+.dragon-avatar-image-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dragon-avatar-image-pattern{
+    position: absolute;
+}
+
+.dragon-avatar-image-backgroung{
+    position: absolute;
+}
+
+.dragon-avatar-image{
+    position: absolute;
+    z-index: 0;
+}

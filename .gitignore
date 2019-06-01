@@ -1,2 +1,3 @@
-/backend/secrets/
-/backend/node-module/
+*node_modules*
+*.cache*
+*dist*

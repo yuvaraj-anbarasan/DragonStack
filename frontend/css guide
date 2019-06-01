@@ -1,0 +1,3 @@
+
+z-index property tells where to place the image 
+example if z-index 0 the image will the first image of all the overlapping images ( z means its pointing towards the screen)

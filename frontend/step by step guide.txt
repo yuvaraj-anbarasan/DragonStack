@@ -1,0 +1,72 @@
+requirements:
+node version 8 or higher:node -v
+
+npm version 5 or higher(installed with node):npm -v
+npm init -y(to init npm i.e package.json)(-y to skip the interactive questions).
+
+parcel-bundler takes collection of javascript files and bundle them into one.Not all browsers support modern javascript syntax that come along. Parcel bundler takes the 
+javascript code and converts into equivalent code that the browser supports.
+parcel --version.
+To install:sudo npm i -g parcel-bundler (sudo means administrator privilages).
+ 
+npm i react@16.2.0 react-dom@16.2.0 --save
+
+plugins to write modern javascript and react syntax:
+ npm i babel-preset-env@1.6.1 babel-preset-react@6.24.1 babel-plugin-transform-class-properties@6.24.1 --save-dev
+Note:install latest version of babel
+install required babel package:npm i @babel/plugin-syntax-object-rest-spread --save-dev, etc.
+won't be needed in production version but needed in development
+So marked as special development dependencies(i.e --save-dev)
+
+ npm i babel-plugin-transform-object-rest-spread  --save-dev
+
+
+Create .babelrc file:
+{
+    "presets": ["env", "react"],
+    "plugins": ["transform-class-properties"]
+}
+
+Foreman(for running both FE and BE):
+React allows to modularize the creation jsx with react components
+
+instal fore globally(check course 64)
+
+note: -g refers to global instalation
+
+
+Every component in react has its own local state.
+
+lifecycle methods:are special react functions that fire during the component loading on the browser 
+
+Arrow functions allows a short syntax for writing function expressions.
+You don't need the function keyword, the return keyword, and the curly brackets.
+
+When trying to fetch generation from backend got a response that backend did not specify a origin.Therefore backend should have the same underlying origin that as the frontend.
+ This issue can be addressed by providing the cors(cross origin resource sharing) middleware to the backend.
+
+same origin policy:
+Most process checks on requests to verify if req is sent from the origin. This helps in preventing cross site scripting attacks that goes to unapproved origins and addresses.
+
+When the frontend sends request to backend the browser stepsin to check whether both have same origin (postman does not implement same origin policy).
+
+Origin:
+hostname of the website.
+port number,80-http & 443-https
+
+note: JSX <tag> - <Dragon />
+
+./components/Dragon.js:-
+map() turns array of traits to array of traitValues.
+join() is used to join trait values
+
+./components/DragonAvatar.js:-
+props-short for property is an object which represents data that a parent component can send to child component
+URI scheme
+
+setState() is used in react to update the state of the react component.(used for state variable).
+
+note:(...) is used as a spread operator.
+
+Redux:
+>is a state container for javascript applications.

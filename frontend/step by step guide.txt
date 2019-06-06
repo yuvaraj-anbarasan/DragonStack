@@ -70,3 +70,27 @@ note:(...) is used as a spread operator.
 
 Redux:
 >is a state container for javascript applications.
+
+Store:
+>Manages the state data of entire application, i.e stores the entire data of app.Therefore when components needs to render data they connect to store
+the read the data.
+>Should have a defined type property. 
+>Single source of truth.
+>Unidirectional flow of data.
+
+Actions:
+>Acts as data type.
+>Objects that define what is to be stored in Store( ex- table in sql etc).
+>Objects with a type field that is globally unique.
+
+Reducers:
+>Describes sections of Store.
+>They respond to actions and update the corresponding section of store as a result.
+
+Connect react to redux store:
+>install react-redux:
+    npm i react-redux@5.0.7 --save
+>Provider wraps around the entire react component tree. Also takes store object as attribute.
+>helps every component to acces props.
+
+>Connet returns a functional.This is called higher order function.

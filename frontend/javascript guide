@@ -1,0 +1,11 @@
+Screen casing:
+DEFAULT_PROPERTIES,ETC.
+
+==
+equal value.
+===
+equal value and equal type.
+!=
+not equal
+!===
+not equal value and equal type.

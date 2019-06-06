@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/yuvaraj-anbarasan/DragonStack/issues"
   },
-  "homepage": "https://github.com/yuvaraj-anbarasan/DragonStack#readme"
+  "homepage": "https://github.com/yuvaraj-anbarasan/DragonStack#readme",
+  "dependencies": {}
 }

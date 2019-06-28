@@ -1,0 +1,47 @@
+You can set secure web connection using HTTPS.
+
+What is HTTPS?
+Hypertext Transfer Protocol Secure (HTTPS) is a variant of the standard web transfer protocol (HTTP) that adds a layer of 
+security on the data in transit through a secure socket layer (SSL) or transport layer security (TLS) protocol connection.
+
+HTTPS enables encrypted communication and secure connection between a remote user and the primary web server.
+
+What is an SSL Certificate?
+SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and 
+safeguarding any sensitive data that is being sent between two systems, preventing criminals from reading and modifying any 
+information transferred, including potential personal details. The two systems can be a server and a client (for example, 
+a shopping website and browser) or server to server (for example, an application with personal identifiable information 
+or with payroll information).
+
+It does this by making sure that any data transferred between users and sites, or between two systems remain impossible to read.
+ It uses encryption algorithms to scramble data in transit, preventing hackers from reading it as it is sent over the connection. 
+ This information could be anything sensitive or personal which can include credit card numbers and other financial information, 
+ names and addresses.
+
+TLS (Transport Layer Security) is just an updated, more secure, version of SSL. We still refer to our security certificates as 
+SSL because it is a more commonly used term, but when you are buying SSL from Symantec you are actually buying the most up to 
+date TLS certificates with the option of ECC, RSA or DSA encryption.
+
+HTTPS (Hyper Text Transfer Protocol Secure) appears in the URL when a website is secured by an SSL certificate. 
+The details of the certificate, including the issuing authority and the corporate name of the website owner, 
+can be viewed by clicking on the lock symbol on the browser bar.
+
+What is HTTP?
+It is a protocol to exchange resources over the web.
+
+HTTPS extends HTTP with TLS.    
+
+Two main aspects of TLS protocol:
+i) encryption: Uses cryptograhic methods to encrypt data.Both client and server have keys to unlock the message.
+ii) identification: Identifies the correct web servers. Client uses digital certificates for this purpose.
+Certification Authority provides the certificate to the organization to have HTTPS connection.
+Process of CA:
+    They investigate the company and the webserver.
+
+Steps:
+
+install body-parer in the backend dir:
+Post method is type of URL which allows user to send data as a part of the request. 
+To handle the post request we need a middleware called body-parser.
+
+npm i body-parser@1.18.3 --save

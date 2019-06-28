@@ -33,3 +33,5 @@ select * from dragon inner join dragontrait on dragon.id = dragontrait."dragonId
   1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |       4 |        1 |  4 | size      | gigantic
   1 | 2019-05-23 16:19:44.653 | unnamed  |           13 |       9 |        1 |  9 | build     | strong and muscular
 (4 rows)
+
+note: to exit psql type\q and press enter.

@@ -18,6 +18,10 @@ install required babel package:npm i @babel/plugin-syntax-object-rest-spread --s
 won't be needed in production version but needed in development
 So marked as special development dependencies(i.e --save-dev)
 
+The difference between these two, is that devDependencies are modules which are only required during development, while dependencies are modules which are also required at runtime. 
+To save a dependency as a devDependency on installation we need to do an npm install --save-dev , instead of just an npm install --save.
+ 
+ 
  npm i babel-plugin-transform-object-rest-spread  --save-dev
 
 
@@ -28,9 +32,10 @@ Create .babelrc file:
 }
 
 Foreman(for running both FE and BE):
+
 React allows to modularize the creation jsx with react components
 
-instal fore globally(check course 64)
+instal foreman globally(check course 64)
 
 note: -g refers to global instalation
 
@@ -48,7 +53,7 @@ When trying to fetch generation from backend got a response that backend did not
 same origin policy:
 Most process checks on requests to verify if req is sent from the origin. This helps in preventing cross site scripting attacks that goes to unapproved origins and addresses.
 
-When the frontend sends request to backend the browser stepsin to check whether both have same origin (postman does not implement same origin policy).
+When the frontend sends request to backend the browser steps in to check whether both have same origin (postman does not implement same origin policy).
 
 Origin:
 hostname of the website.

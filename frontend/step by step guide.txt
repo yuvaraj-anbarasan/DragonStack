@@ -53,7 +53,7 @@ When trying to fetch generation from backend got a response that backend did not
 same origin policy:
 Most process checks on requests to verify if req is sent from the origin. This helps in preventing cross site scripting attacks that goes to unapproved origins and addresses.
 
-When the frontend sends request to backend the browser stepsin to check whether both have same origin (postman does not implement same origin policy).
+When the frontend sends request to backend the browser steps in to check whether both have same origin (postman does not implement same origin policy).
 
 Origin:
 hostname of the website.

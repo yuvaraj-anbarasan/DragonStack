@@ -1,13 +1,37 @@
 const { Router } = require('express');
 const AccountsTable = require('../accounts/table');
+const { hash } = require('../accounts/secure');
+const Session = require('../accounts/session');
+const { setSession } = require('./secure');
 
 router = new Router();
 
 router.post('/signup',(req, res, next) => {
     const {username, password} = req.body;
-     AccountsTable.storeAccount({username, password})
-     .then(() => res.json({message: 'success'}))
-     .catch(error => next(error));
+    const usernameHash = hash(username);
+    const passwordHash = hash(password);
+    AccountsTable.getAccount({ usernameHash })
+    .then(({ account }) => {
+        if(!account){
+            return AccountsTable.storeAccount({usernameHash, passwordHash});
+        }
+        else{
+            const error = new Error('Account already exist');
+
+            error.statusCode = 409;
+
+            throw error;
+        }
+    })
+    .then(() => {
+        /*as set session methosd is asynchronous we cannot give the client a success message before the method gets executed.
+        Therefore the setSession method uses a promise*/
+        setSession({ username, res})
+        .then(({ message }) => res.json(message))
+        .catch( error => res.json({message:"cookie not set"}));
+    })
+    .catch( error => next(error));
+     
 });
 
 router.post('/login',(req, res, next) => {

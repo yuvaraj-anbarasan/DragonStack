@@ -24,7 +24,7 @@ const setSession = ({ username, res, sessionId }) => {
             
             resolve({message:"sessionId update successfull"});
             })
-            .catch(error => res.json({message:"sessionId update unsuccessful"}));
+            .catch(error => res.json({error}));
         }
     
     });

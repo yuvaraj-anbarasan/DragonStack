@@ -1,11 +1,11 @@
 const pool = require('../../databasePool');
 
 class AccountsTable{
-    static storeAccount({username, password}) {
+    static storeAccount({usernameHash, passwordHash}) {
         return new Promise((resolve, reject) => {
             pool.query(
-                'INSERT INTO accounts(username, password) VALUES($1, $2);',
-                [username,password],
+                'INSERT INTO accounts(username, password) VALUES($1, $2)',
+                [usernameHash,passwordHash],
                 (error, response) => {
                     if(error)
                     {

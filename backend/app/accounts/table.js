@@ -30,7 +30,6 @@ class AccountsTable{
     }
 
     static updateSessionId({ sessionId, usernameHash}) {
-        console.log('sessionId', sessionId);
         return new Promise((resolve, reject) => {
             pool.query('UPDATE accounts SET "sessionId" = $1 WHERE username = $2;',
             [sessionId, usernameHash],

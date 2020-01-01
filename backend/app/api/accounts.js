@@ -6,6 +6,7 @@ const { setSession } = require('./secure');
 
 router = new Router();
 
+
 router.post('/signup',(req, res, next) => {
     const {username, password} = req.body;
     const usernameHash = hash(username);
@@ -40,6 +41,8 @@ router.post('/login',(req, res, next) => {
     AccountsTable.getAccount({ usernameHash: hash(username) })
     .then(({ account }) => {
         if( account && account.password === hash(password)){
+
+            console.log("account:", account);
             const { sessionId } = account;
 
             return setSession({ username, res, sessionId })

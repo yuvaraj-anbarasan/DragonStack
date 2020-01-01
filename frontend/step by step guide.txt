@@ -8,6 +8,7 @@ parcel-bundler takes collection of javascript files and bundle them into one.Not
 javascript code and converts into equivalent code that the browser supports.
 parcel --version.
 To install:sudo npm i -g parcel-bundler (sudo means administrator privilages).
+Install in root project directory.
  
 npm i react@16.2.0 react-dom@16.2.0 --save
 

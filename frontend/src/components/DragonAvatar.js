@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {patchy, skinny, slender, sporty, spotted, stocky, striped, plain} from '../assets/index'
+import {patchy, skinny, slender, sporty, spotted, stocky, striped, plain} from '../assets/index'; 
 //import spotted from '../assets/spotted.png';
 
 const propertyMap = {

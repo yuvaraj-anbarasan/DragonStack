@@ -1,7 +1,7 @@
 {
   "name": "DragonStack",
   "version": "1.0.0",
-  "description": "",
+  "description": "It is full stack development project which sells dragons online.",
   "main": "index.js",
   "scripts": {
     "start": "nf start",
@@ -19,5 +19,6 @@
     "url": "https://github.com/yuvaraj-anbarasan/DragonStack/issues"
   },
   "homepage": "https://github.com/yuvaraj-anbarasan/DragonStack#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

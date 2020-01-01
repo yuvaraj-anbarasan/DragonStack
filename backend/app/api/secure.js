@@ -11,7 +11,6 @@ const setSession = ({ username, res, sessionId }) => {
             setSessionCookie({ sessionString, res });
             resolve({message:"session restored"});
         }else {
-            console.log('sessionId',sessionId);
             session = new Session({ username });
             sessionString = session.toString();
 
@@ -22,7 +21,7 @@ const setSession = ({ username, res, sessionId }) => {
             .then(() =>{ 
             setSessionCookie({ sessionString, res });
             
-            resolve({message:"sessionId update successfull"});
+            resolve({message:"Successfull login!!! sessionId update successfull"});
             })
             .catch(error => res.json({error}));
         }

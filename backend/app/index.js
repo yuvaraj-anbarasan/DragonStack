@@ -17,6 +17,9 @@ app.use( cors({ origin: 'http://localhost:1234'}));
 app.use(bodyParser.json()); // used for accounts post request.
 app.use(cookieParser());
 
+appp.use('/', (req, res, next) => {
+    res.status(200).send();
+});
 app.use('/account', accountRouter);
 app.use('/dragon', dragonRouter);
 app.use('/generation',generationRouter);
